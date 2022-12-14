@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundColour"
+    tools:context=".ui.register.RegistrationFragment">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middleGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <View
+        android:id="@+id/verificationContainer"
+        android:layout_width="0dp"
+        android:elevation="-10dp"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_outline"
+        app:layout_constraintBottom_toBottomOf="@+id/middleGuideLine"
+        app:layout_constraintEnd_toEndOf="@+id/endGuideLine"
+        app:layout_constraintStart_toStartOf="@+id/startGuideLine"
+        app:layout_constraintTop_toTopOf="@+id/topGuideLine" />
+
+    <Spinner
+        android:id="@+id/country_codes"
+        android:layout_width="wrap_content"
+        android:elevation="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/verificationContainer"
+        app:layout_constraintStart_toStartOf="@id/verificationContainer"
+        android:spinnerMode="dropdown"
+
+
+        />
+
+    <View
+        android:id="@+id/languageSelectionContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_outline"
+        app:layout_constraintBottom_toTopOf="@+id/tv_privacy"
+        app:layout_constraintEnd_toEndOf="@+id/endGuideLine"
+        app:layout_constraintStart_toStartOf="@+id/startGuideLine"
+        app:layout_constraintTop_toTopOf="@+id/middleGuideLine" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_georgian"
+        android:layout_width="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/button_outline_blue"
+        android:text="GEORGIAN"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/btn_english"
+        app:layout_constraintEnd_toEndOf="@id/languageSelectionContainer"
+        app:layout_constraintStart_toStartOf="@id/languageSelectionContainer"
+        app:layout_constraintTop_toTopOf="@+id/languageSelectionContainer"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_english"
+        android:layout_width="0dp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_outline_blue"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:text="ENGLISH"
+        app:layout_constraintBottom_toTopOf="@id/btn_ukrainian"
+        app:layout_constraintEnd_toEndOf="@id/languageSelectionContainer"
+        app:layout_constraintStart_toStartOf="@id/languageSelectionContainer"
+        app:layout_constraintTop_toBottomOf="@+id/btn_georgian"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_ukrainian"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/button_outline_blue"
+        android:text="UKRAINIAN"
+        android:textColor="@color/white"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/languageSelectionContainer"
+        app:layout_constraintEnd_toEndOf="@id/languageSelectionContainer"
+        app:layout_constraintStart_toStartOf="@id/languageSelectionContainer"
+        app:layout_constraintTop_toBottomOf="@+id/btn_english"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_privacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Privacy Policy"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomGuideLine"
+        app:layout_constraintEnd_toEndOf="@+id/endGuideLine"
+        app:layout_constraintStart_toStartOf="@+id/startGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/languageSelectionContainer" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

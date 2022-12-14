@@ -8,6 +8,11 @@ android {
     namespace 'com.example.solidarity_v1'
     compileSdk 33
 
+
+    buildFeatures{
+        viewBinding true
+    }
+
     defaultConfig {
         applicationId "com.example.solidarity_v1"
         minSdk 21
@@ -16,10 +21,6 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildFeatures{
-        viewBinding true
     }
 
     buildTypes {
