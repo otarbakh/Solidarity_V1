@@ -2,6 +2,7 @@
     <string name="app_name">Solidarity_V1</string>
 
     <string name="spinner">Choose</string>
+    <string name="discl">Telephone number is needed for verification and direct communication between beneficiaries and volunteers</string>
 
     <string-array name="country_codes">
         <item>+995 GEO</item>
