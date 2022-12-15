@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/BackgroundColour"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/BackgroundColour"
     tools:context=".ui.register.RegistrationFragment">
-
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -14,74 +13,161 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.15"
-        />
+        app:layout_constraintGuide_percent="0.15" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/bottomGuideLine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.85"
-        />
+        app:layout_constraintGuide_percent="0.85" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/startGuideLine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05"
-        />
+        app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/endGuideLine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.95"
-        />
+        app:layout_constraintGuide_percent="0.95" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/middleGuideLine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.50"
-        />
+        app:layout_constraintGuide_percent="0.50" />
+
+
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:hint="Phone Number"
+        app:layout_constraintStart_toEndOf="@id/index_spinner"
+        app:layout_constraintTop_toTopOf="@id/verificationContainer" />
+
+
+
 
     <View
-        android:layout_margin="20dp"
         android:id="@+id/verificationContainer"
-        android:background="@drawable/button_outline"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/view_outline"
         app:layout_constraintBottom_toBottomOf="@+id/middleGuideLine"
         app:layout_constraintEnd_toEndOf="@+id/endGuideLine"
         app:layout_constraintStart_toStartOf="@+id/startGuideLine"
-        app:layout_constraintTop_toTopOf="@+id/topGuideLine"/>
+        app:layout_constraintTop_toTopOf="@+id/topGuideLine" />
 
     <View
-        android:layout_margin="20dp"
         android:id="@+id/languageSelectionContainer"
-        android:background="@color/white"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/tv_privacy"
         app:layout_constraintEnd_toEndOf="@+id/endGuideLine"
         app:layout_constraintStart_toStartOf="@+id/startGuideLine"
-        app:layout_constraintTop_toTopOf="@+id/middleGuideLine"/>
+        app:layout_constraintTop_toTopOf="@+id/middleGuideLine" />
 
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_privacy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Privacy Policy"
         android:layout_marginVertical="20dp"
+        android:text="Privacy Policy"
         app:layout_constraintBottom_toBottomOf="@+id/bottomGuideLine"
         app:layout_constraintEnd_toEndOf="@+id/endGuideLine"
         app:layout_constraintStart_toStartOf="@+id/startGuideLine"
         app:layout_constraintTop_toBottomOf="@+id/languageSelectionContainer" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_english"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/button_outline_gray"
+        android:text="English"
+        app:layout_constraintBottom_toTopOf="@+id/btn_georgian"
+        app:layout_constraintEnd_toEndOf="@+id/languageSelectionContainer"
+        app:layout_constraintStart_toStartOf="@+id/languageSelectionContainer"
+        app:layout_constraintTop_toTopOf="@+id/languageSelectionContainer"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_georgian"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+
+        android:background="@drawable/button_outline_gray"
+        android:text="ქართული"
+        app:layout_constraintBottom_toTopOf="@+id/btn_ukrainian"
+        app:layout_constraintEnd_toEndOf="@+id/languageSelectionContainer"
+        app:layout_constraintStart_toStartOf="@+id/languageSelectionContainer"
+        app:layout_constraintTop_toBottomOf="@+id/btn_english" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_ukrainian"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/button_outline_gray"
+        android:text="Ukrainian"
+        app:layout_constraintBottom_toBottomOf="@id/languageSelectionContainer"
+        app:layout_constraintEnd_toEndOf="@+id/languageSelectionContainer"
+        app:layout_constraintStart_toStartOf="@+id/languageSelectionContainer"
+        app:layout_constraintTop_toBottomOf="@+id/btn_georgian" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:clickable="false"
+        android:id="@+id/btn_next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/button_outline_gray"
+        android:text="Next"
+        app:layout_constraintEnd_toEndOf="@+id/verificationContainer"
+        app:layout_constraintStart_toStartOf="@id/verificationContainer"
+        app:layout_constraintTop_toBottomOf="@+id/et_phoneNumber" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_infoIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon"
+        app:layout_constraintBottom_toBottomOf="@+id/verificationContainer"
+        app:layout_constraintStart_toStartOf="@+id/btn_next"
+        app:layout_constraintTop_toBottomOf="@+id/btn_next" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="For Registration, Please Enter Your Telephone Number"
+        app:layout_constraintBottom_toBottomOf="@+id/verificationContainer"
+        app:layout_constraintEnd_toEndOf="@id/verificationContainer"
+        app:layout_constraintStart_toEndOf="@id/iv_infoIcon"
+        app:layout_constraintTop_toBottomOf="@id/btn_next" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/index_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/verificationContainer"
+        app:layout_constraintTop_toTopOf="@+id/verificationContainer" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

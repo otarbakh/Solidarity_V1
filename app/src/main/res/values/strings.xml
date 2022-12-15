@@ -1,3 +1,11 @@
 <resources>
+
     <string name="app_name">Solidarity_V1</string>
+    <string name="spinner">Choose</string>
+
+    <string-array name="country_codes">
+        <item>+995 GEO</item>
+        <item>+380 UKR</item>
+        <item>+1 USA</item>
+    </string-array>
 </resources>
