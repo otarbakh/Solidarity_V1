@@ -51,11 +51,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="10dp"
-        android:hint="Phone Number"
+        android:hint="Code"
         app:layout_constraintStart_toEndOf="@id/index_spinner"
         app:layout_constraintTop_toTopOf="@id/verificationContainer" />
-
-
 
 
     <View
@@ -66,6 +64,7 @@
         android:background="@drawable/view_outline"
         app:layout_constraintBottom_toBottomOf="@+id/middleGuideLine"
         app:layout_constraintEnd_toEndOf="@+id/endGuideLine"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="@+id/startGuideLine"
         app:layout_constraintTop_toTopOf="@+id/topGuideLine" />
 
